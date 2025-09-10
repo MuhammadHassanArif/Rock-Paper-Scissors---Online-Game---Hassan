@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock Paper Scissors Game | Play Online</title>
+  <meta name="description" content="Play the Rock Paper Scissors game online! Test your luck against the computer, track your score, and enjoy this fun, classic game.">
+  <meta name="keywords" content="Rock Paper Scissors, Stone Paper Scissors, Play Online Game, Fun Game, Scissors Paper Rock">
+  <meta name="author" content="M. Hassan Arif">
+
+  <!-- Open Graph (Facebook, LinkedIn, WhatsApp Preview) -->
+  <meta property="og:title" content="Rock Paper Scissors Game | Play Online">
+  <meta property="og:description" content="Enjoy a fun game of Rock Paper Scissors online. Play against the computer and keep track of your score!">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://yourwebsite.com/rock-paper-scissors">
+  <meta property="og:image" content="https://yourwebsite.com/images/rock-paper-scissors-preview.png">
+
+  <!-- Twitter Card (For Twitter Preview) -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Rock Paper Scissors Game | Play Online">
+  <meta name="twitter:description" content="Play Rock Paper Scissors against the computer and track your score!">
+  <meta name="twitter:image" content="https://yourwebsite.com/images/rock-paper-scissors-preview.png">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Rock Paper Scissors</h1>
+        <div class="choices">
+            <div class="choice" id="rock">
+            <img src="rock-img.jpeg" alt="">
+            </div>
+            <div class="choice" id="paper">
+            <img src="paper-img.png" alt="">
+            </div>
+            <div class="choice" id="scissors">
+            <img id="last-img" src="scissors-img.jpeg" alt="">
+            </div>
+        </div>
+
+        <div class="score-board">
+            <div class="score">
+                <p id="user-score">0</p>
+                <p>You</p>
+            </div>
+             <div class="score">
+                <p id="comp-score">0</p>
+                <p>Comp</p>
+            </div>
+        </div>
+
+        <div class="msg-container">
+            <p id="msg">Play your move</p>
+        </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,119 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+h1{
+    text-align: center;
+    padding: 20px;
+    background-color: #081b31;
+    color: #fff;
+}
+.choices{
+    padding: 35px;
+    display: flex;
+    justify-content: center;
+}
+.choice{
+    height: 240px;
+    width: 240px;
+    transform: rotate(270deg);
+}
+.choice:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+#scissors{
+    margin-left: 10px;
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    gap: 5rem;
+}
+#user-score , #comp-score{
+    font-size: 4rem
+}
+.msg-container{
+    margin-top: 50px;
+    
+}
+#msg{
+background-color: #081b31;
+color: #fff;
+display:inline;
+padding: 20px 40px 20px 40px;
+font-size: 2rem;
+border-radius: 20px;
+
+}
+
+
+
+/* media query */
+
+/* Media query for screens < 750px */
+@media (max-width: 750px) {
+    /* heading */
+    h1 {
+        font-size: 1.4rem;
+        padding: 14px;
+    }
+
+    /* stack choices vertically and give spacing */
+    .choices {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 18px;
+        gap: 16px;
+    }
+
+    /* make .choice fluid — let image handle rotation */
+    .choice {
+        width: min(170px, 40vw); /* responsive width */
+        height: auto;            /* let content define height */
+        margin: 8px 0;
+        transform: none;         /* override any desktop rotation on container */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: visible;       /* allow rotated image to be visible */
+    }
+
+    /* scale and rotate the image itself (safer for layout) */
+    .choice img {
+        width: 100%;
+        height: auto;
+        display: block;
+        transform: rotate(270deg);     /* rotate the image, not the container */
+        transform-origin: center center;
+    }
+
+    /* scoreboard stacked on mobile */
+    .score-board {
+        flex-direction: column;
+        gap: 8px;
+        font-size: 1.6rem;
+        align-items: center;
+    }
+
+    #user-score, #comp-score {
+        font-size: 2.6rem;
+    }
+
+    /* message box */
+    #msg {
+        font-size: 1.05rem;
+        padding: 12px 18px;
+        display: inline-block;
+    }
+
+    /* remove left margin on scissors (if it was added for desktop) */
+    #scissors {
+        margin-left: 0;
+    }
+}
